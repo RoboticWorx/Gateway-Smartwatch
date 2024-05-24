@@ -1,6 +1,6 @@
 # Gateway-Smartwatch
 
-Everything you need to build this project can be found under my "Gateway" smartwatch project on https://www.roboticworx.io/ for free!
+Everything you need to build this project can be found under my "Gateway" smartwatch project on https://www.roboticworx.io for free!
 
 **_(Remember, you can download anything you'd like for yourself but you CAN'T sell it. All my work is licensed, thanks!)_**
 
