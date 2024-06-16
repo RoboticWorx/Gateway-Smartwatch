@@ -1,0 +1,56 @@
+Reference,Value,Footprint,Datasheet,AVAILABILITY,Availability,Check_prices,DESCRIPTION,Description,MF,MP,PACKAGE,PRICE,PURCHASE-URL,Package,Price,Purchase-URL,SNAPEDA_PN,STANDARD,SnapEDA_Link,Qty
+"C1, C4, C11, C16, C18, C19",1uF,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,6
+C2,220nF,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+"C3, C25",10nF,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,2
+"C5, C7-C9, C15, C20, C21, C23, C24, C27",0u1F,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,10
+"C6, C17, C22, C26",10uF,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,~,,,,,,,,,,,,,,,,,4
+C10,4u7F,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+C28,2u2F,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+D3,1N5819HW-7-F,MyParts:SOD3715X145N,,,,,,,,,,,,,,,,IPC-7351B,,1
+D4-D6,LESD5D5.0CT1G,MyParts:TVS_LESD5D5.0CT1G,,,,,,,,,,,,,,,,Manufacturer Recommendations,,3
+D7,CHGLED,MyParts:LTST-C190KGKT,,In Stock,In Stock,https://www.snapeda.com/parts/LTST-C190KGKT/Lite-On+Inc./view-part/?ref=eda,Green 571nm LED Indication - Discrete 2V 0603 (1608 Metric),"
+Green 571nm LED Indication - Discrete 2V 0603 (1608 Metric)
+",Lite-On Inc.,LTST-C190KGKT,0603 Lite-On,None,https://pricing.snapeda.com/search/part/LTST-C190KGKT/?ref=eda,0603 Lite-On,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=105320&manufacturer=Lite-On Inc.&part_name=LTST-C190KGKT&search_term=None,,,https://www.snapeda.com/parts/LTST-C190KGKT/Lite-On+Inc./view-part/?ref=snap,1
+J1,Lidar_Conn_In,Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical,~,,,,,,,,,,,,,,,,,1
+J2,ST7789_LCD,MyParts:FFC_1.25mm,~,,,,,,,,,,,,,,,,,1
+J3,Lidar_Conn_Out,Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical,~,,,,,,,,,,,,,,,,,1
+J4,TYPE-C-31-M-12,MyParts:HRO_TYPE-C-31-M-12,,,,,,,,,,,,,,,TYPE-C-31-M-12,Manufacturer Recommendations,,1
+J5,LiPo,Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical,~,,,,,,,,,,,,,,,,,1
+J6,GPIOs,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical,~,,,,,,,,,,,,,,,,,1
+M1,Laser,Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical,~,,,,,,,,,,,,,,,,,1
+Q1,BSS138,MyParts:BSS138,,In Stock,In Stock,https://www.snapeda.com/parts/BSS138/Onsemi/view-part/?ref=eda,N-Channel 50 V 200mA (Ta) 225mW (Ta) Surface Mount SOT-23-3 (TO-236),"
+N-Channel 50 V 220mA (Ta) 350mW (Ta) Surface Mount SOT-23-3
+",onsemi,BSS138,SOT-23 ON,None,,SOT-23-3 ON Semiconductor,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=7326959&manufacturer=onsemi&part_name=BSS138&search_term=None,,,https://www.snapeda.com/parts/BSS138/Onsemi/view-part/?ref=snap,1
+"R1, R2, R4, R6, R9, R12, R15, R18",10k,-- mixed values --,~,,,,,,,,,,,,,,,,,8
+"R3, R8",5k1,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,,,,,,,,,,,,,,,,,2
+R5,1k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+R7,NTC10k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+R11,1000,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+R13,5k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+R14,2k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+"R16, R17",4k7,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,2
+"SW1, SW2",PTS810_SJM_250_SMTR_LFS,MyParts:SW_PTS810_SJM_250_SMTR_LFS,,,In Stock,https://www.snapeda.com/parts/PTS810%20SJM%20250%20SMTR%20LFS/C%2526K/view-part/?ref=eda,,"
+Tactile Switch SPST-NO Top Actuated Surface Mount
+",C&K,PTS810 SJM 250 SMTR LFS,,,,None,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=522770&manufacturer=C&amp;K&part_name=PTS810 SJM 250 SMTR LFS&search_term=None,,Manufacturer Recommendations,https://www.snapeda.com/parts/PTS810%20SJM%20250%20SMTR%20LFS/C%2526K/view-part/?ref=snap,2
+SW3-SW7,SW_SPST,MyParts:PTS645VH58,~,,,,,,,,,,,,,,,,,5
+U1,LSM303AGRTR,MyParts:LSM303AGRTR,,Good,In Stock,https://www.snapeda.com/parts/LSM303AGRTR/STMicroelectronics/view-part/?ref=eda,Ultra-compact high-performance e-compass 3D accelerometer and 3D magnetometer module,"
+Accelerometer, Magnetometer, Temperature, 6 Axis Sensor I2C, SPI Output
+",STMicroelectronics,LSM303AGRTR,LGA-12 STMicroelectronics,1.79 USD,,LGA-12 STMicroelectronics,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=491952&manufacturer=STMicroelectronics&part_name=LSM303AGRTR&search_term=None,,,https://www.snapeda.com/parts/LSM303AGRTR/STMicroelectronics/view-part/?ref=snap,1
+U2,TPS79533DCQR,MyParts:TPS79533DCQR,,,,,,,,,,,,,,,,,,1
+U3,VL53L1CXV0FY_1,MyParts:VL53L1CXV0FY_1,,,In Stock,https://www.snapeda.com/parts/VL53L1CXV0FY/1/STMicroelectronics/view-part/?ref=eda,,"
+Optical Sensor 157.480 (4m) I2C Output
+",STMicroelectronics,VL53L1CXV0FY/1,,,,LGA-12 STMicroelectronics,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=6275433&manufacturer=STMicroelectronics&part_name=VL53L1CXV0FY/1&search_term=None,,Manufacturer Recommendation,https://www.snapeda.com/parts/VL53L1CXV0FY/1/STMicroelectronics/view-part/?ref=snap,1
+U4,BME680,Package_LGA:Bosch_LGA-8_3x3mm_P0.8mm_ClockwisePinNumbering,https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-DS001.pdf,,,,,,,,,,,,,,,,,1
+U5,DS3231MZ_TRL,MyParts:DS3231MZ_TRL,,,In Stock,https://www.snapeda.com/parts/DS3231MZ+TRL/Analog+Devices/view-part/?ref=eda,,"
+±5ppm, I2C Real-Time Clock
+",Analog Devices,DS3231MZ+TRL,,,,SOIC-8 Maxim,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=1097988&manufacturer=Analog Devices&part_name=DS3231MZ+TRL&search_term=None,,,https://www.snapeda.com/parts/DS3231MZ+TRL/Analog+Devices/view-part/?ref=snap,1
+U7,BQ24090DGQR,MyParts:IC_XTR111AIDGQR,,,,,,,,,,,,,,,,,,1
+U9,ICM-42670-P,MyParts:ICM-42670-P.kicad_sym,,,In Stock,https://www.snapeda.com/parts/ICM-42688-P/TDK+InvenSense/view-part/?ref=eda,,"
+Accelerometer, Gyroscope, 6 Axis Sensor - Output
+",TDK InvenSense,ICM-42688-P,,,,LGA-14 TDK InvenSense,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=4791856&manufacturer=TDK InvenSense&part_name=ICM-42688-P&search_term=None,,IPC-7351B,https://www.snapeda.com/parts/ICM-42688-P/TDK+InvenSense/view-part/?ref=snap,1
+U10,ESP32-S3-MINI-1-N8,MyParts:ESP32-S3-MINI-1-N8,,,In Stock,https://www.snapeda.com/parts/ESP32-S3-MINI-1-N8/Espressif+Systems/view-part/?ref=eda,,"
+Bluetooth, WiFi 802.11b/g/n, Bluetooth v5.0 Transceiver Module 2.4GHz PCB Trace Surface Mount
+",Espressif Systems,ESP32-S3-MINI-1-N8,,,,None,None,,,Manufacturer Recommendations,https://www.snapeda.com/parts/ESP32-S3-MINI-1-N8/Espressif+Systems/view-part/?ref=snap,1
+U11,MCP3427-E_UN,MyParts:MCP3427-E_UN,,,In Stock,https://www.snapeda.com/parts/MCP3427-E/UN/Microchip/view-part/?ref=eda,,"
+Microchip MCP3427-E/UN, 16 bit Serial ADC, Dual Differential Input, 10-Pin MSOP | Microchip Technology Inc. MCP3427-E/UN
+",Microchip,MCP3427-E/UN,,,,MSOP-10 Microchip,None,https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=13253&manufacturer=Microchip&part_name=MCP3427-E/UN&search_term=None,,,https://www.snapeda.com/parts/MCP3427-E/UN/Microchip/view-part/?ref=snap,1
