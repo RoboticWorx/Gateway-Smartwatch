@@ -25,7 +25,7 @@ N-Channel 50 V 220mA (Ta) 350mW (Ta) Surface Mount SOT-23-3
 "R3, R8",5k1,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,,,,,,,,,,,,,,,,,2
 R5,1k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
 R7,NTC10k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
-R11,1000,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,,,,,,,,,,,,,,,,,1
+R11,1k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,,,,,,,,,,,,,,,,,1
 R13,5k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
 R14,2k,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,1
 "R16, R17",4k7,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,,,,,,,,,,,,,,,,,2
