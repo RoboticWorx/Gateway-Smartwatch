@@ -1,5 +1,5 @@
 ,From LCSC,,,,,,,
-Order Qty.,LCSC Part Number,Manufacture Part Number,Manufacturer,Package,Description,RoHS,Unit Price,
+Order Qty.,LCSC Part Number,Manufacture Part Number,Manufacturer,Package,Description,RoHS,Unit Price,Total Price,
 3,C383211,LESD5D5.0CT1G,LRC,SOD-523,Zener Diode 5.6V 18.6V 5V Bi-Directional SOD-523  ESD Protection Devices ROHS,YES,0.0152,0.0456
 1,C82544,1N5819HW-7-F,Diodes Incorporated,SOD-123,Diode 40V 450mV@1A 1A SOD-123  Schottky Barrier Diodes (SBD) ROHS,YES,0.0208,0.0208
 ,,,,,,,,
@@ -55,4 +55,4 @@ IC REG LIN 3.3V 500MA SOT223-6",0,$2.61 ,$2.61 ,,
 ,,,,,,$50.93 ,,
 ,,,,,,,,
 ,"ALL OTHER COMPONENTS WERE PURCHASED VIA AMAZON. Remember, it's better to buy too many than too few. I DO NOT RECOMMEND BUYING THE MINIMUM AMOUNT!",,,,,,,
-,,(Amazon purchase links are in the project BOM www.roboticworx.io),,,,,,
+,(Amazon purchase links are in the project BOM www.roboticworx.io),,,,,,,
