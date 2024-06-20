@@ -1,0 +1,72 @@
+#include <ESP32Servo.h>  // Using Servo library to control servo
+#include <esp_now.h>
+#include <WiFi.h>
+
+Servo servo;  // Create a servo object to control a servo
+
+const int buttonPin = 15;  // Ensure this pin supports INPUT_PULLDOWN
+const int motorPin = 13;   // Ensure this pin supports PWM output for servo
+
+bool onState = false;
+
+// Structure to receive data
+typedef struct {
+  uint8_t command;  // Change to uint8_t to match the sending data type
+} ReceivedData;
+
+ReceivedData myData;
+
+// Callback function to handle received data
+void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+  memcpy(&myData, incomingData, sizeof(myData));
+  //Serial.print("Received command: ");
+  //Serial.println(myData.command);
+
+  if (myData.command == 1) {
+    onState = !onState;  // Toggle the onState
+  }
+}
+
+void setup() {
+  // Initialize Serial for debugging
+  Serial.begin(115200);
+
+  // Set button pin as input
+  pinMode(buttonPin, INPUT_PULLDOWN);
+
+  // Attach servo
+  servo.attach(motorPin);
+
+  // Initialize WiFi in STA mode
+  WiFi.mode(WIFI_STA);
+
+  // Init ESP-NOW
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  // Once ESP-NOW is successfully Init, we will register for recv CB to
+  // get recv packer info
+  esp_now_register_recv_cb(OnDataRecv);
+}
+
+void loop() {
+
+  // Check if button is pressed
+  if (digitalRead(buttonPin) == HIGH) {
+    delay(200);
+    onState = !onState;  // Toggle the state manually
+  }
+  // State also toggles when receiving a "1" from the Gateway watch
+
+  if (onState)
+  {
+    servo.write(120);
+  }
+  else
+  {
+    servo.write(10);
+  }
+  //Serial.println(onState);
+}
