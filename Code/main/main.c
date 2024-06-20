@@ -1,8 +1,5 @@
 /* Code for the RoboticWorx Gateway smartwatch project! Build this project for yourself at www.roboticworx.io. */
 
-// Light-94:3C:C6:38:30:A8
-// Door-34:85:18:46:22:98
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
