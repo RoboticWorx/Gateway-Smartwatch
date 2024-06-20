@@ -41,7 +41,7 @@
 #include <ds3231.h>
 #include <mcp342x.h>
 
-SemaphoreHandle_t i2cMutex;
+SemaphoreHandle_t i2cMutex; // Create mutex for I2C bus
 
 #define INTERVAL 400
 #define WAIT vTaskDelay(INTERVAL)
@@ -50,16 +50,16 @@ SemaphoreHandle_t i2cMutex;
 #define DESERT_ORANGE rgb565(253, 164, 90) // Desert orange color
 #define DESERT_RED rgb565(204, 85, 57) // Desert red color
 #define DESERT_BLUE rgb565(119, 181, 254) // Desert blue color
-#define DESERT_GREEN rgb565(189, 204, 150) // Desert blue color
-#define DESERT_WHITE rgb565(255, 255, 255) // Desert blue color
-#define DESERT_BLACK rgb565(0, 0, 0) // Desert blue color
+#define DESERT_GREEN rgb565(189, 204, 150) 
+#define DESERT_WHITE rgb565(255, 255, 255)
+#define DESERT_BLACK rgb565(0, 0, 0)
 
 #define I2C_MASTER_SCL_IO           14          // SCL pin
 #define I2C_MASTER_SDA_IO           13          // SDA pin
 #define I2C_MASTER_NUM              I2C_NUM_0   // I2C port number
 #define I2C_MASTER_FREQ_HZ          100000      // I2C frequency (100KHz)
 #define VL53L1X_I2C_ADDRESS         0x29        // Default I2C address of VL53L1X (7-bit address)
-#define ICM42670_I2C_ADDRESS        0x69
+#define ICM42670_I2C_ADDRESS        0x69 // Other addresses
 #define BME680_I2C_ADDRESS          0x76
 #define MCP3427_I2C_ADDRESS         0x6E
 
@@ -83,13 +83,10 @@ SemaphoreHandle_t i2cMutex;
 #define MAX_PEERS 20  // Maximum number of peers to track
 #define DEFAULT_SCAN_LIST_SIZE 5
 
-#define SLEEP_TIMEOUT_MS 1500
+#define SLEEP_TIMEOUT_MS 1500 // Time until going back into sleep mode
 
 #define MAX_MAC_ADDRESSES 11
 #define MAC_ADDRESS_LENGTH 12
-
-//#define RECEIVER_MAC_ADDR {0x68, 0xB6, 0xB3, 0x2C, 0x12, 0x00} // 68:b6:b3:2c:12:00
-//static const uint8_t receiver_mac[] = RECEIVER_MAC_ADDR; // Use static const for fixed values
 
 #define PORT 0
 #if defined(CONFIG_EXAMPLE_I2C_ADDRESS_0)
@@ -148,7 +145,7 @@ static void SPIFFS_Directory(char * path) {
 	closedir(dir);
 }
 
-// You have to set these CONFIG value using menuconfig.
+// Set these CONFIG values using menuconfig.
 #if 0
 #define CONFIG_WIDTH  240
 #define CONFIG_HEIGHT 280
@@ -249,16 +246,12 @@ void reset_sleep_timer() {
 
 static void enter_light_sleep()
 {
-    //esp_rom_gpio_pad_select_gpio(BACKLIGHT_PIN); // Turn off display
     gpio_set_direction(BACKLIGHT_PIN, GPIO_MODE_OUTPUT);
     gpio_set_level(BACKLIGHT_PIN, 0);
     backlightOn = false;
 
-    //gpio_set_level(LIDAR_PIN, 0);
     gpio_hold_en(BACKLIGHT_PIN); // Lock GPIO state
     gpio_hold_en(LIDAR_PIN); // Lock GPIO state
-
-    //vTaskDelay(pdMS_TO_TICKS(300));
 
     // Configure the button and ICM42670 interrupt pin as wakeup sources
     uint64_t wakeup_pins = (1ULL << BUTTON_1) | (1ULL << WOM_PIN);
@@ -267,16 +260,10 @@ static void enter_light_sleep()
     // Enter light sleep
     esp_light_sleep_start();
 
-    // The device wakes up here
-    //vTaskDelay(pdMS_TO_TICKS(100));
-
     reset_sleep_timer();
 
     gpio_hold_dis(BACKLIGHT_PIN); // Disable hold
     gpio_hold_dis(LIDAR_PIN);
-    //gpio_set_level(BACKLIGHT_PIN, 1); // Turn display back on
-    //gpio_set_level(LIDAR_PIN, 1);
-
 }
 
 void sleep_timer_callback(TimerHandle_t xTimer)
@@ -313,7 +300,7 @@ static float convert_voltage_to_percentage(float voltage)
 
 static float convert_voltage_bat(float voltage)
 {
-	float r1 = 5000;
+	float r1 = 5000; // Resistors in voltage divider
 	float r2 = 2000;
 
     float bat_voltage = ((r1 + r2) * voltage) / r2;
@@ -504,7 +491,7 @@ void getVL53L1X(void *pvParameters)
     	ESP_LOGE(TAG_VL53L1X, "Sensor initialization failed!");
     }
 
-    // Set the region of interest (ROI) to a smaller area
+    // Set the region of interest (ROI) to a smaller area. This will effect accuracy
     //VL53L1X_SetROI(dev, 4, 4);
 
     status = VL53L1X_StartRanging(dev); // Start ranging
@@ -2148,16 +2135,7 @@ void ST7789(void *pvParameters)
 			//xTaskNotify(getVL53L1XHandle, 2, eSetValueWithOverwrite);
 		}
 
-		/*vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-		strcpy((char *)ascii, "16Dot Gothic Font");
-		lcdDrawString(&dev, fx16G, xpos, ypos, ascii, color);
-
-		xpos = 0;
-		ypos = 75;
-		strcpy((char *)ascii, "24Dot Gothic Font");
-		lcdDrawString(&dev, fx24G, xpos, ypos, ascii, color);
-		vTaskDelay(1000 / portTICK_PERIOD_MS);*/
+		
 
 	} // end while
 }
