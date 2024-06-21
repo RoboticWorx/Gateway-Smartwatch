@@ -4,8 +4,8 @@
 
 Servo servo;  // Create a servo object to control a servo
 
-const int buttonPin = 15;  // Ensure this pin supports INPUT_PULLDOWN
-const int motorPin = 13;   // Ensure this pin supports PWM output for servo
+const int buttonPin = 32;  // Doesn't have to be this exact pin
+const int motorPin = 13;   // Doesn't have to be this exact pin
 
 bool onState = false;
 
@@ -17,10 +17,10 @@ typedef struct {
 ReceivedData myData;
 
 // Callback function to handle received data
-void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+void OnDataRecv(const esp_now_recv_info *info, const uint8_t *incomingData, int len) {
   memcpy(&myData, incomingData, sizeof(myData));
   //Serial.print("Received command: ");
-  //Serial.println(myData.command);
+  //Serial.println(myData.command);  // This should now correctly print 1
 
   if (myData.command == 1) {
     onState = !onState;  // Toggle the onState
@@ -52,21 +52,20 @@ void setup() {
 }
 
 void loop() {
-
   // Check if button is pressed
-  if (digitalRead(buttonPin) == HIGH) {
+  if (digitalRead(buttonPin) == HIGH) 
+  {
     delay(200);
     onState = !onState;  // Toggle the state manually
   }
-  // State also toggles when receiving a "1" from the Gateway watch
 
-  if (onState)
+  if (onState) 
   {
-    servo.write(120);
-  }
-  else
+    servo.write(140);
+  } 
+  else 
   {
-    servo.write(10);
+    servo.write(40);
   }
   //Serial.println(onState);
 }
