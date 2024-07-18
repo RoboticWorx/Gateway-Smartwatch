@@ -1,6 +1,7 @@
 # Gateway-Smartwatch
 
-**Everything you need to build my Gateway ESP32 smartwatch project! This watch integrates a BME680, ICM42670, MCP3427, DS3231, and VL53L1X all into one smartwatch!**
+**Everything you need to build my Gateway ESP32 smartwatch project!**
+This watch integrates a BME680, ICM42670, MCP3427, DS3231, and VL53L1X all into one smartwatch!
 
 Everything you need to build this project can be found under my "Gateway" smartwatch project on https://www.roboticworx.io for free. (https://www.roboticworx.io/p/build-the-ultimate-smartwatch-lidar)
 
